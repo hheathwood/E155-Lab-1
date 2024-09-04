@@ -1,0 +1,20 @@
+#Start recording tcl command: 9/3/2024 15:58:48
+#Project Location: C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/Lab_1; Project name: Lab_1
+prj_create -name "Lab_1" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/Lab_1/source/impl_1/lab1_xx.sv"
+prj_add_source "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/Lab_1/source/impl_1/lab1_7segment_decoder.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_saveas -name "E155_Lab1" -dir "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project"
+#Stop recording: 9/3/2024 17:40:18
