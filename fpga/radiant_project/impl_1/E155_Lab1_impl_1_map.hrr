@@ -1,0 +1,8 @@
+---------------------------------------------------
+Report for cell seven_segment_decoder
+   Instance path: seven_segment_decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        100.0
+                               LUTGATE	          7        100.0
+                                 IOBUF	         11        100.0

@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2021.4 2021.10, Oct 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/lscc/radiant/3.2/modeltech/win32loem
+vseven_segment_decoder
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1725509702
+!i10b 1
+!s100 IE]:]YKTnHa6]a6[;P:^g1
+Il4c>@bY>QZ=>KBe9>YZ:D0
+S1
+dC:/Users/hheathwood/Desktop/Henry_MicroPs/lab1
+w1725429873
+8C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv
+FC:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv
+!i122 2
+L0 7 24
+VDg1SIo80bB@j0V0VzS_@n1
+OT;L;2021.4;73
+r1
+!s85 0
+31
+!s108 1725509702.000000
+!s107 C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv|
+!s101 -O0
+!i113 1
+o-work work -sv -O0
+tCvgOpt 0
