@@ -1,10 +1,23 @@
 ----------------------------------------------------------------------
-Report for cell seven_segment_decoder.TECH
-Register bits:  0 of 5280 (0.000%)
-I/O cells:      11
+Report for cell top.TECH
+Register bits:  3 of 5280 (0.057%)
+I/O cells:      2
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                 IB         4          100.0
-                               LUT4         7          100.0
-                                 OB         7          100.0
-                              TOTAL        18
+                               CCU2         2          100.0
+                            FD1P3XZ         3          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         1          100.0
+                               LUT4         1          100.0
+                                 OB         1          100.0
+SUB MODULES
+                        clk_divider         1
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell clk_divider.v1
+Instance Path : clK_div
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         2          100.0
+                            FD1P3XZ         3          100.0
+                              TOTAL         5

@@ -1,0 +1,14 @@
+#Start recording tcl command: 9/3/2024 22:25:25
+#Project Location: C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project; Project name: E155_Lab1
+prj_open "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/E155_Lab1.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc"
+prj_enable_source "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/5/2024 16:01:46

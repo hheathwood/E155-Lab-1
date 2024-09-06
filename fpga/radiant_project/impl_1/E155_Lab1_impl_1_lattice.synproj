@@ -41,6 +41,7 @@
 -lib pmi -vhd "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd"
 -sver "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_xx.sv"
 "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv"
+"C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/led_blink.sv"
 
 
 -path "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project"

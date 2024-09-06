@@ -1,3 +1,31 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2024.1.0.34.2
-Wed Sep  4 21:50:04 2024
+Thu Sep  5 17:32:18 2024
 
+WARNING <1027013> - No port matched 'data[0]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (1) : Can't resolve object 'data[0]' in constraint 'ldc_set_location -site {37} [get_ports {data[0]}]'.
+WARNING <1027013> - No port matched 'data[1]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (2) : Can't resolve object 'data[1]' in constraint 'ldc_set_location -site {31} [get_ports {data[1]}]'.
+WARNING <1027013> - No port matched 'data[2]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (3) : Can't resolve object 'data[2]' in constraint 'ldc_set_location -site {35} [get_ports {data[2]}]'.
+WARNING <1027013> - No port matched 'data[3]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (4) : Can't resolve object 'data[3]' in constraint 'ldc_set_location -site {32} [get_ports {data[3]}]'.
+WARNING <1027013> - No port matched 'seg[0]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (5) : Can't resolve object 'seg[0]' in constraint 'ldc_set_location -site {12} [get_ports {seg[0]}]'.
+WARNING <1027013> - No port matched 'seg[1]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (6) : Can't resolve object 'seg[1]' in constraint 'ldc_set_location -site {20} [get_ports {seg[1]}]'.
+WARNING <1027013> - No port matched 'seg[2]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (7) : Can't resolve object 'seg[2]' in constraint 'ldc_set_location -site {11} [get_ports {seg[2]}]'.
+WARNING <1027013> - No port matched 'seg[3]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (8) : Can't resolve object 'seg[3]' in constraint 'ldc_set_location -site {19} [get_ports {seg[3]}]'.
+WARNING <1027013> - No port matched 'seg[4]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (9) : Can't resolve object 'seg[4]' in constraint 'ldc_set_location -site {21} [get_ports {seg[4]}]'.
+WARNING <1027013> - No port matched 'seg[5]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (10) : Can't resolve object 'seg[5]' in constraint 'ldc_set_location -site {13} [get_ports {seg[5]}]'.
+WARNING <1027013> - No port matched 'seg[6]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (11) : Can't resolve object 'seg[6]' in constraint 'ldc_set_location -site {18} [get_ports {seg[6]}]'.
+WARNING <1027013> - No port matched 'led[0]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (12) : Can't resolve object 'led[0]' in constraint 'ldc_set_location -site {25} [get_ports {led[0]}]'.
+WARNING <1027013> - No port matched 'led[1]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (13) : Can't resolve object 'led[1]' in constraint 'ldc_set_location -site {42} [get_ports {led[1]}]'.
+WARNING <1027013> - No port matched 'led[2]'.
+WARNING <1026001> - C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc (14) : Can't resolve object 'led[2]' in constraint 'ldc_set_location -site {38} [get_ports {led[2]}]'.

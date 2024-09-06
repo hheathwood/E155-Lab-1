@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Sep  3 23:04:33 2024
+Thu Sep  5 17:31:16 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f E155_Lab1_impl_1_lattice.synproj -logfile E155_Lab1_impl_1_lattice.srp -gui -msgset C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/promote.xml 
@@ -118,6 +118,7 @@ CRITICAL <35001476> - synthesis: A top-level module has not been specified for t
 Verilog design file = C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v
 Verilog design file = C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_xx.sv
 Verilog design file = C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv
+Verilog design file = C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/led_blink.sv
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -170,15 +171,19 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v(45): 
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v. VERI-1328
 Analyzing Verilog file c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/lab1_xx.sv. VERI-1482
 Analyzing Verilog file c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv. VERI-1482
+Analyzing Verilog file c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/led_blink.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd
 
 INFO <35921014> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
-WARNING <35001200> - synthesis: Setting seven_segment_decoder as the top-level module. To specify the top-level module explicitly, go to View->Set Views->Hierarchy or Project->Active Implementation->Set Top-Level Unit.
+WARNING <35001200> - synthesis: Setting top as the top-level module. To specify the top-level module explicitly, go to View->Set Views->Hierarchy or Project->Active Implementation->Set Top-Level Unit.
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1". VHDL-1504
 Top module language type = Verilog.
-Top module name (Verilog, mixed language): seven_segment_decoder
-INFO <35901018> - synthesis: c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv(7): compiling module seven_segment_decoder. VERI-1018
+Top module name (Verilog, mixed language): top
+INFO <35901018> - synthesis: c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/led_blink.sv(6): compiling module top. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV="0b01"). VERI-1018
+INFO <35901018> - synthesis: c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/led_blink.sv(22): compiling module clk_divider. VERI-1018
+WARNING <35901209> - synthesis: c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/led_blink.sv(32): expression size 32 truncated to fit in target size 25. VERI-1209
                                                          
 
 
@@ -210,13 +215,16 @@ INFO <35901018> - synthesis: c:/users/hheathwood/desktop/henry_microps/lab1/fpga
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
-################### Begin Area Report (seven_segment_decoder)######################
-Number of register bits => 0 of 5280 (0 % )
-IB => 4
-LUT4 => 7
-OB => 7
+################### Begin Area Report (top)######################
+Number of register bits => 3 of 5280 (0 % )
+CCU2 => 2
+FD1P3XZ => 3
+HSOSC_CORE => 1
+IB => 1
+LUT4 => 1
+OB => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 0
+Number of odd-length carry chains : 1
 Number of even-length carry chains : 0
 
 
@@ -224,21 +232,22 @@ Number of even-length carry chains : 0
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 0
+Number of Clocks: 1
+  Net : int_osc, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : data_c_3, loads : 7
-  Net : data_c_2, loads : 7
-  Net : data_c_1, loads : 7
-  Net : data_c_0, loads : 7
-  Net : seg_c_6, loads : 1
-  Net : seg_c_5, loads : 1
-  Net : seg_c_4, loads : 1
-  Net : seg_c_3, loads : 1
-  Net : seg_c_2, loads : 1
-  Net : seg_c_1, loads : 1
+  Net : n9, loads : 3
+  Net : clK_div/n63, loads : 2
+  Net : clK_div/n11, loads : 2
+  Net : clK_div/n66, loads : 2
+  Net : nreset_c, loads : 1
+  Net : clK_div/led_c, loads : 1
+  Net : clK_div/n20, loads : 1
+  Net : clK_div/n3, loads : 1
+  Net : clK_div/n19, loads : 1
+  Net : clK_div/n2, loads : 1
 ################### End Clock Report ##################
 
 
@@ -254,13 +263,13 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 89 MB
+Peak Memory Usage: 90 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 612fb812a1d616eadfe9d657bdb1d71fb8e5de7c
+Checksum -- synthesis -- netlist: 377d9303f0c1eca18805bd08edd8a8cd49d2d65
 
 
 
