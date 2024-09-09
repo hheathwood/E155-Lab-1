@@ -4,8 +4,8 @@
 set ret 0
 if {[catch {
 
-sys_set_attribute -gui on -msg {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/promote.xml}
-msg_load {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/promote.xml}
+sys_set_attribute -gui on -msg {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/promote.xml}
+msg_load {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/promote.xml}
 des_set_project_udb -in {E155_Lab1_impl_1_map.udb} -out {E155_Lab1_impl_1.udb} -milestone par -pm ice40tp
 des_set_reference_udb -clean
 # par option
@@ -13,13 +13,13 @@ par_set_option { disable_timing_driven false placement_iterations 1 placement_it
 # run place & route
 par_run
 # backup netlist & constraint file
-if {[file exists {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_syn.udb}] && [file exists {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_map.udb}] && [file exists {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/E155_Lab1_impl_1.udb}]} {
-  file delete -force {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/E155_Lab1_impl_1_syn.udb} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/E155_Lab1_impl_1_map.udb} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/E155_Lab1_impl_1.udb} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/lastrun.pdc}
-  file copy -force -- {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_syn.udb} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/postsyn.udb}
-  file copy -force -- {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_map.udb} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/postmap.udb}
-  file copy -force -- {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/E155_Lab1_impl_1.udb} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/postpar.udb}
-  if [file exists {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc}] {
-    file copy -force -- {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/seven_segment_pins.pdc} {C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1/incr/lastrun.pdc}
+if {[file exists {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_syn.udb}] && [file exists {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_map.udb}] && [file exists {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/E155_Lab1_impl_1.udb}]} {
+  file delete -force {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/E155_Lab1_impl_1_syn.udb} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/E155_Lab1_impl_1_map.udb} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/E155_Lab1_impl_1.udb} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/lastrun.pdc}
+  file copy -force -- {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_syn.udb} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/postsyn.udb}
+  file copy -force -- {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/E155_Lab1_impl_1_map.udb} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/postmap.udb}
+  file copy -force -- {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/E155_Lab1_impl_1.udb} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/postpar.udb}
+  if [file exists {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/seven_segment_pins.pdc}] {
+    file copy -force -- {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/seven_segment_pins.pdc} {C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1/incr/lastrun.pdc}
   }
 }
 

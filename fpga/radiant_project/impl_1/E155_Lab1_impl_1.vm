@@ -1,10 +1,10 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.1.0.34.2
-// Netlist written on Thu Sep  5 17:31:17 2024
+// Netlist written on Sat Sep  7 14:59:24 2024
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
-// file 0 "c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv"
-// file 1 "c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/lab1_xx.sv"
-// file 2 "c:/users/hheathwood/desktop/henry_microps/lab1/fpga/radiant_project/source/impl_1/led_blink.sv"
+// file 0 "c:/users/hheathwood/desktop/henry microps/e155-lab-1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv"
+// file 1 "c:/users/hheathwood/desktop/henry microps/e155-lab-1/fpga/radiant_project/source/impl_1/lab1_xx.sv"
+// file 2 "c:/users/hheathwood/desktop/henry microps/e155-lab-1/fpga/radiant_project/source/impl_1/led_blink.sv"
 // file 3 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v"
 // file 4 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd"
 // file 5 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
@@ -59,68 +59,84 @@
 // file 54 "c:/lscc/radiant/2024.1/ip/pmi/pmi_sub.v"
 
 //
-// Verilog Description of module top
+// Verilog Description of module top_level
 //
 
-module top (input nreset, output led);
+module top_level (input [3:0]data, output [2:0]led, output [6:0]seg);
     
-    (* is_clock=1, lineinfo="@2(11[9],11[16])" *) wire int_osc;
     
-    wire VCC_net, nreset_c, led_c, GND_net, n9;
+    wire data_c_3, data_c_2, data_c_1, data_c_0, led_0_1, led_0_0, 
+        seg_c_6, seg_c_5, seg_c_4, seg_c_3, seg_c_2, seg_c_1, seg_c_0, 
+        GND_net;
     
+    (* lineinfo="@1(10[24],10[37])" *) seven_segment_decoder s2 (data_c_2, 
+            data_c_1, data_c_3, data_c_0, seg_c_0, seg_c_6, seg_c_3, 
+            seg_c_1, seg_c_2, seg_c_4, seg_c_5, led_0_0);
     VLO i1 (.Z(GND_net));
-    (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
-            .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
-            .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
-            .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(int_osc));
-    defparam hf_osc.CLKHF_DIV = "0b01";
-    defparam hf_osc.FABRIC_TRIME = "DISABLE";
-    (* lineinfo="@2(7[19],7[25])" *) IB nreset_pad (.I(nreset), .O(nreset_c));
-    (* lut_function="(!(A))", lineinfo="@2(7[19],7[25])" *) LUT4 i11_1_lut (.A(nreset_c), 
-            .Z(n9));
-    defparam i11_1_lut.INIT = "0x5555";
-    (* lineinfo="@2(8[19],8[22])" *) OB led_pad (.I(led_c), .O(led));
-    (* lineinfo="@2(17[15],17[44])" *) clk_divider clK_div (int_osc, n9, 
-            led_c);
-    VHI i2 (.Z(VCC_net));
+    (* lineinfo="@1(5[36],5[40])" *) IB \data_pad[0]  (.I(data[0]), .O(data_c_0));
+    (* lineinfo="@1(5[36],5[40])" *) IB \data_pad[1]  (.I(data[1]), .O(data_c_1));
+    (* lineinfo="@1(5[36],5[40])" *) IB \data_pad[2]  (.I(data[2]), .O(data_c_2));
+    (* lineinfo="@1(5[36],5[40])" *) IB \data_pad[3]  (.I(data[3]), .O(data_c_3));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[0]  (.I(seg_c_0), .O(seg[0]));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[1]  (.I(seg_c_1), .O(seg[1]));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[2]  (.I(seg_c_2), .O(seg[2]));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[3]  (.I(seg_c_3), .O(seg[3]));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[4]  (.I(seg_c_4), .O(seg[4]));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[5]  (.I(seg_c_5), .O(seg[5]));
+    (* lineinfo="@1(6[42],6[45])" *) OB \seg_pad[6]  (.I(seg_c_6), .O(seg[6]));
+    (* lineinfo="@1(6[25],6[28])" *) OB \led_pad[0]  (.I(led_0_0), .O(led[0]));
+    (* lineinfo="@1(9[12],9[25])" *) led_logic s1 (data_c_2, data_c_3, led_0_1);
+    (* lineinfo="@1(6[25],6[28])" *) OB \led_pad[1]  (.I(led_0_1), .O(led[1]));
+    (* lineinfo="@1(6[25],6[28])" *) OB \led_pad[2]  (.I(GND_net), .O(led[2]));
     
 endmodule
 
 //
-// Verilog Description of module clk_divider
+// Verilog Description of module seven_segment_decoder
 //
 
-module clk_divider (input int_osc, input n9, output led_c);
+module seven_segment_decoder (input data_c_2, input data_c_1, input data_c_3, 
+            input data_c_0, output seg_c_0, output seg_c_6, output seg_c_3, 
+            output seg_c_1, output seg_c_2, output seg_c_4, output seg_c_5, 
+            output led_0_0);
     
-    (* is_clock=1, lineinfo="@2(11[9],11[16])" *) wire int_osc;
-    wire [2:0]n17;
     
-    wire n3, n2, n63, GND_net, n11, n66, VCC_net;
+    (* lut_function="(!(A (B+!(C (D)+!C !(D)))+!A !(B (C (D))+!B !(C+!(D)))))", lineinfo="@0(10[3],28[10])" *) LUT4 data_c_3_I_0_4_lut (.A(data_c_2), 
+            .B(data_c_1), .C(data_c_3), .D(data_c_0), .Z(seg_c_0));
+    defparam data_c_3_I_0_4_lut.INIT = "0x6102";
+    (* lut_function="(!(A ((C+!(D))+!B)+!A (B (C+(D))+!B !(C (D)+!C !(D)))))", lineinfo="@0(10[3],28[10])" *) LUT4 seg_c_6_I_0_4_lut (.A(data_c_1), 
+            .B(data_c_0), .C(data_c_3), .D(data_c_2), .Z(seg_c_6));
+    defparam seg_c_6_I_0_4_lut.INIT = "0x1805";
+    (* lut_function="(A (B (C (D))+!B (C (D)+!C !(D)))+!A !(B ((D)+!C)+!B (C+!(D))))" *) LUT4 i162_4_lut (.A(data_c_0), 
+            .B(data_c_3), .C(data_c_1), .D(data_c_2), .Z(seg_c_3));
+    defparam i162_4_lut.INIT = "0xa142";
+    (* lut_function="(A (B (D)+!B !((D)+!C))+!A (B (C)+!B (C (D))))", lineinfo="@0(10[3],28[10])" *) LUT4 seg_c_1_I_0_4_lut (.A(data_c_0), 
+            .B(data_c_3), .C(data_c_2), .D(data_c_1), .Z(seg_c_1));
+    defparam seg_c_1_I_0_4_lut.INIT = "0xd860";
+    (* lut_function="(A (B (C (D)))+!A (B (D)+!B !((D)+!C)))", lineinfo="@0(10[3],28[10])" *) LUT4 seg_c_2_I_0_4_lut (.A(data_c_0), 
+            .B(data_c_3), .C(data_c_1), .D(data_c_2), .Z(seg_c_2));
+    defparam seg_c_2_I_0_4_lut.INIT = "0xc410";
+    (* lut_function="(!(A (B+!(C))+!A (B ((D)+!C)+!B !(C+(D)))))", lineinfo="@0(10[3],28[10])" *) LUT4 seg_c_4_I_0_4_lut (.A(data_c_1), 
+            .B(data_c_3), .C(data_c_0), .D(data_c_2), .Z(seg_c_4));
+    defparam seg_c_4_I_0_4_lut.INIT = "0x3170";
+    (* lut_function="(!(A (B+!((D)+!C))+!A !(B (C (D))+!B !(C+!(D)))))", lineinfo="@0(10[3],28[10])" *) LUT4 seg_c_5_I_0_4_lut (.A(data_c_1), 
+            .B(data_c_3), .C(data_c_2), .D(data_c_0), .Z(seg_c_5));
+    defparam seg_c_5_I_0_4_lut.INIT = "0x6302";
+    (* lut_function="(!(A (B)+!A !(B)))", lineinfo="@0(10[3],28[10])" *) LUT4 i67_2_lut (.A(data_c_0), 
+            .B(data_c_1), .Z(led_0_0));
+    defparam i67_2_lut.INIT = "0x6666";
     
-    (* syn_use_carry_chain=1, lineinfo="@2(32[28],32[39])" *) FD1P3XZ counter_8_9__i2 (.D(n17[1]), 
-            .SP(VCC_net), .CK(int_osc), .SR(n9), .Q(n2));
-    defparam counter_8_9__i2.REGSET = "RESET";
-    defparam counter_8_9__i2.SRMODE = "CE_OVER_LSR";
-    (* syn_use_carry_chain=1, lineinfo="@2(32[28],32[39])" *) FD1P3XZ counter_8_9__i3 (.D(n17[2]), 
-            .SP(VCC_net), .CK(int_osc), .SR(n9), .Q(led_c));
-    defparam counter_8_9__i3.REGSET = "RESET";
-    defparam counter_8_9__i3.SRMODE = "CE_OVER_LSR";
-    (* lineinfo="@2(32[28],32[39])" *) FA2 counter_8_9_add_4_1 (.A0(GND_net), 
-            .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(VCC_net), 
-            .C1(n3), .D1(n63), .CI1(n63), .CO0(n63), .CO1(n11), .S1(n17[0]));
-    defparam counter_8_9_add_4_1.INIT0 = "0xc33c";
-    defparam counter_8_9_add_4_1.INIT1 = "0xc33c";
-    (* lineinfo="@2(32[28],32[39])" *) FA2 counter_8_9_add_4_3 (.A0(GND_net), 
-            .B0(GND_net), .C0(n2), .D0(n11), .CI0(n11), .A1(GND_net), 
-            .B1(GND_net), .C1(led_c), .D1(n66), .CI1(n66), .CO0(n66), 
-            .S0(n17[1]), .S1(n17[2]));
-    defparam counter_8_9_add_4_3.INIT0 = "0xc33c";
-    defparam counter_8_9_add_4_3.INIT1 = "0xc33c";
-    VHI i2 (.Z(VCC_net));
-    (* syn_use_carry_chain=1, lineinfo="@2(32[28],32[39])" *) FD1P3XZ counter_8_9__i1 (.D(n17[0]), 
-            .SP(VCC_net), .CK(int_osc), .SR(n9), .Q(n3));
-    defparam counter_8_9__i1.REGSET = "RESET";
-    defparam counter_8_9__i1.SRMODE = "CE_OVER_LSR";
-    VLO i1 (.Z(GND_net));
+endmodule
+
+//
+// Verilog Description of module led_logic
+//
+
+module led_logic (input data_c_2, input data_c_3, output led_0_1);
+    
+    
+    (* lut_function="(A (B))", lineinfo="@2(54[3],60[10])" *) LUT4 i99_2_lut (.A(data_c_2), 
+            .B(data_c_3), .Z(led_0_1));
+    defparam i99_2_lut.INIT = "0x8888";
     
 endmodule

@@ -1,21 +1,26 @@
 ---------------------------------------------------
-Report for cell top
-   Instance path: top
+Report for cell top_level
+   Instance path: top_level
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          6        100.0
-                               LUTGATE	          2        100.0
-                                LUTCCU	          4        100.0
-                                 IOBUF	          2        100.0
-                                PFUREG	          3        100.0
+                                  LUT4	         10        100.0
+                               LUTGATE	         10        100.0
+                                 IOBUF	         14        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                           clk_divider	          1        66.7
+                             led_logic	          1        10.0
+                 seven_segment_decoder	          1        80.0
 ---------------------------------------------------
-Report for cell clk_divider
-   Instance path: top/clK_div
+Report for cell seven_segment_decoder
+   Instance path: top_level/s2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          4        66.7
-                                LUTCCU	          4        100.0
-                                PFUREG	          3        100.0
+                                  LUT4	          8        80.0
+                               LUTGATE	          8        80.0
+---------------------------------------------------
+Report for cell led_logic
+   Instance path: top_level/s1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1        10.0
+                               LUTGATE	          1        10.0

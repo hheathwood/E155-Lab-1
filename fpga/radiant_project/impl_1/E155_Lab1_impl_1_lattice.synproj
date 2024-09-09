@@ -36,15 +36,16 @@
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2024.1/ispfpga/ice40tp/data" "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/impl_1" "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project"
+-path "C:/lscc/radiant/2024.1/ispfpga/ice40tp/data" "C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/impl_1" "C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project"
 -ver "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_xx.sv"
-"C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv"
-"C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project/source/impl_1/led_blink.sv"
+-sver "C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/source/impl_1/lab1_xx.sv"
+"C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/source/impl_1/lab1_7segment_decoder.sv"
+"C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project/source/impl_1/led_blink.sv"
 
 
--path "C:/Users/hheathwood/Desktop/Henry_MicroPs/lab1/fpga/radiant_project"
+-path "C:/Users/hheathwood/Desktop/Henry MicroPs/E155-Lab-1/fpga/radiant_project"
+-top top_level
 -udb "E155_Lab1_impl_1_rtl.udb"
 -output_hdl "E155_Lab1_impl_1.vm"
 
